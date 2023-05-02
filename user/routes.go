@@ -6,8 +6,9 @@ import (
 
 
 func Routes(app *fiber.App)   {
-	app.Get("/user", GetOne)
+	app.Get("/user", GetAll)
+	app.Get("/user/:id", GetOne)
 	app.Post("/user", Create)
-	app.Put("/user", Update)
-	app.Delete("/user", Delete)
+	app.Put("/user/:id", Update)
+	app.Delete("/user/:id", Delete)
 }
