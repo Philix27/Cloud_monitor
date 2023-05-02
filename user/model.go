@@ -8,18 +8,12 @@ import (
 
 
 
-var DB *gorm.DB
-var err error
-
-const DNS = ""
-
-
 type User struct {
 	gorm.Model 
 	ID        uint64    `gorm:"primaryKey"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdatedAt time.Time `json:"updated_at"`
-	first_name string `json:"firstname"`
-	last_name string `json:"firstname"`
-	email string	`json:"firstname"`
+	First_name 	string 	`json:"first_name"`
+	Last_name 	string 	`json:"last_name"`
+	Email 		string		`json:"email"`
 }

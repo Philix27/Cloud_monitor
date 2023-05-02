@@ -12,7 +12,6 @@ func main() {
 	fmt.Println("Hi guys")
 	app := fiber.New()
 	app.Get("/", func(c *fiber.Ctx) error { return c.SendString("Hello Peeps")})
-	app.Get("/user", user.Controller)
-
+	user.Routes(app)
 	app.Listen(":3000")
 }
